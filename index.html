@@ -1,0 +1,343 @@
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>장정훈 | Dev Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+.font-manrope{font-family:'Manrope',sans-serif}
+.font-montserrat{font-family:'Montserrat',sans-serif}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}
+.animate-fade{animation:fadeInUp .8s cubic-bezier(.4,0,.2,1) forwards}
+@media(prefers-reduced-motion:reduce){.animate-fade{animation:none;opacity:1;transform:none}}
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-manrope antialiased selection:bg-indigo-500 selection:text-white bg-zinc-900 text-zinc-100"><div class="spline-container fixed top-0 w-full h-screen -z-10"><iframe src="https://my.spline.design/animatedbackgroundgradientforweb-jvJDeBWjMvShkjPKxPRUswLq" frameborder="0" width="100%" height="100%" id="aura-spline"></iframe></div>
+<a href="#hero" class="sr-only focus:not-sr-only absolute top-2 left-2 z-[100] px-3 py-2 rounded-md text-sm font-medium bg-orange-600">Skip to content</a>
+<header class="fixed top-0 w-full z-50 backdrop-blur border-b bg-stone-900/70 border-stone-800">
+  <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#" class="text-lg font-semibold tracking-tight font-montserrat hover:text-orange-400 transition-colors">JH.dev</a>
+    <nav class="hidden md:flex gap-6 text-sm" aria-label="Primary">
+      <a href="#hero" class="nav-link font-manrope hover:text-indigo-400 transition-colors">Home</a>
+      <a href="#about" class="nav-link font-manrope hover:text-indigo-400 transition-colors">About</a>
+      <a href="#exp" class="nav-link font-manrope hover:text-indigo-400 transition-colors">Experience</a>
+      <a href="#skills" class="nav-link font-manrope hover:text-indigo-400 transition-colors">Skills</a>
+      <a href="#projects" class="nav-link font-manrope hover:text-indigo-400 transition-colors">Projects</a>
+      <a href="#contact" class="nav-link font-manrope hover:text-indigo-400 transition-colors">Contact</a>
+    </nav>
+    <button id="burger" class="md:hidden p-2 rounded hover:bg-stone-800 focus:outline-none" aria-label="Open menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu w-5 h-5"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg>
+    </button>
+  </div>
+  <nav id="mobileNav" class="md:hidden fixed inset-0 backdrop-blur pt-16 px-8 translate-x-full transition-transform duration-300 bg-stone-900/90" aria-label="Mobile">
+    <button id="closeMenu" class="absolute top-4 right-4 p-2 rounded hover:bg-stone-800" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+    </button>
+    <ul class="space-y-6 text-lg">
+      <li><a href="#hero" class="block nav-link hover:text-indigo-400 transition-colors">Home</a></li>
+      <li><a href="#about" class="block nav-link hover:text-indigo-400 transition-colors">About</a></li>
+      <li><a href="#exp" class="block nav-link hover:text-indigo-400 transition-colors">Experience</a></li>
+      <li><a href="#skills" class="block nav-link hover:text-indigo-400 transition-colors">Skills</a></li>
+      <li><a href="#projects" class="block nav-link hover:text-indigo-400 transition-colors">Projects</a></li>
+      <li><a href="#contact" class="block nav-link hover:text-indigo-400 transition-colors">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<section id="hero" class="relative overflow-hidden min-h-screen flex items-center">
+  <div class="absolute inset-0 bg-gradient-to-br from-orange-700/20 via-pink-700/10 to-red-700/5" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full blur-3xl animate-pulse bg-orange-600/30"></div>
+  <div class="pointer-events-none absolute bottom-20 -right-20 w-72 h-72 rounded-full blur-3xl animate-pulse bg-pink-600/20"></div>
+  <div class="relative z-10 max-w-7xl flex flex-col md:flex-row gap-16 mr-auto ml-auto pt-32 pr-6 pb-32 pl-6 items-center">
+    <div class="space-y-8 md:max-w-xl animate-fade">
+      <h1 class="text-4xl md:text-6xl tracking-tight leading-tight font-montserrat font-medium">
+        Hi, I’m <span class="text-orange-400">장정훈</span><br class="hidden sm:block">
+        A <span class="text-red-400">Full-stack</span> Developer
+      </h1>
+      <p class="text-lg md:text-xl text-stone-300">
+        <span class="text-red-400">ASP.NET</span> 웹 서비스를 개발하고 유지 보수해 왔습니다.
+        <span class="text-pink-300">Spring Boot · Next.js · React</span>로 역량을 확장하고 있으며,
+        AI 시대를 대비하여 <span class="text-orange-300">바이브 코딩</span> 방식으로 웹사이트를 제작하고 있습니다.
+      </p>
+      <div class="flex gap-4">
+        <a href="#exp" class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-orange-600 hover:bg-orange-500 ring-orange-400 focus-visible:ring-2 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="rocket" class="lucide lucide-rocket w-4 h-4"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg> 경력 보기
+        </a>
+        <a href="#skills" class="inline-flex items-center gap-2 px-6 py-3 border rounded-md border-stone-600 hover:border-orange-400 hover:text-orange-300 ring-orange-400 focus-visible:ring-2 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="settings-2" class="lucide lucide-settings-2 w-4 h-4"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg> 기술 스킬
+        </a>
+      </div>
+    </div>
+    <figure class="relative group animate-fade">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMcTAO6HKvRD9iD-6azd7b2_QOokJ9FqaukS4IQPLV7ejKsuTk_MElqV1NXLU8J8A6IYaJLUiD_2hzzYHIGJtnJouAlYShYGNeQXhFcVuoPj6Tbb1jDnJ8JTaMHE7LMZUi-El2b9TtjzAlGY7Z1WlUl=w800" alt="장정훈 프로필 사진" class="w-72 h-72 rounded-full object-cover ring-4 ring-orange-600/70">
+      <figcaption class="sr-only">JH.dev profile image</figcaption>
+      <div class="absolute -inset-2 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition bg-orange-600/30"></div>
+    </figure>
+  </div>
+</section>
+<section id="about" class="py-28 border-t border-stone-800">
+  <div class="max-w-4xl mx-auto px-6 space-y-12">
+    <h2 class="text-3xl md:text-4xl tracking-tight text-center font-montserrat font-medium animate-fade">About Me</h2>
+    <div class="space-y-6 text-lg text-stone-300 animate-fade">
+      <p>안녕하세요. 저는 <span class="font-semibold text-orange-300">웹 개발</span> 분야에 열정을 가진 <span class="font-semibold text-red-400">웹 프로그래머</span>입니다.</p>
+      <p>
+        <span class="font-semibold text-orange-300">ASP.NET&nbsp;MVC</span>를 활용한 웹 애플리케이션 개발에 뛰어난 숙련도를 보유하고 있으며,
+        이를 바탕으로 안정적이고 확장 가능한 시스템 구축에 기여해왔습니다.
+        또한 <span class="font-semibold text-pink-300">Spring&nbsp;Boot</span>,
+        <span class="font-semibold text-pink-300">RESTful&nbsp;API</span> 및
+        <span class="font-semibold text-pink-300">Next.js</span>,
+        <span class="font-semibold text-pink-300">React</span> 분야에 대해 깊이 있는 학습을 마쳐
+        실제 업무에 빠르게 적응할 수 있는 준비된 상태로,
+        <span class="font-semibold text-red-400">프론트엔드</span>(front-end)부터
+        <span class="font-semibold text-red-400">백엔드</span>(back-end)까지 모두 아우를 수 있는
+        <span class="font-semibold text-orange-300">풀스택 개발자</span>로서의 역량을 갖추고 있습니다.
+      </p>
+      <p>
+        저는 기술적 역량 외에도 <span class="font-semibold text-orange-300">착한 성격</span>과
+        <span class="font-semibold text-orange-300">성실함</span>을 바탕으로 팀 내에서
+        긍정적인 협업 분위기를 만들어왔습니다. 때로는 약간의
+        <span class="font-semibold text-pink-300">고집</span>을 보이기도 하지만, 이를
+        팀원들과의 원활한 소통과 협력을 통해
+        <span class="font-semibold text-red-400">융통성</span>으로 발전시켜왔습니다.
+        이러한 점은 복잡한 문제 상황에서도 <span class="font-semibold text-orange-300">침착하게</span>
+        해결책을 모색하고, 프로젝트의 성공적인 완수를 이끌어내는 데 큰 도움이 되었습니다.
+      </p>
+      <p class="">
+        앞으로도 <span class="font-semibold text-orange-300">최신 기술 동향</span>을 꾸준히 연구하고
+        <span class="font-semibold text-orange-300">실무</span>에 적용하여,
+        귀사의 <span class="font-semibold text-red-400">성장</span>과
+        <span class="font-semibold text-red-400">발전</span>에 기여하는 개발자로 거듭나겠습니다.
+        저의 <span class="font-semibold text-orange-300">기술적 역량</span>과
+        <span class="font-semibold text-orange-300">인간적인 성실함</span>, 그리고
+        적절한 <span class="font-semibold text-pink-300">고집</span>과
+        <span class="font-semibold text-red-400">융통성</span>을 바탕으로
+        귀사의 <span class="font-semibold text-orange-300">프로젝트</span>에
+        <span class="font-semibold text-red-400">긍정적인 변화를</span> 함께 만들어 나갈 수 있기를 기대합니다.
+      </p>
+    </div>
+  </div>
+</section>
+<section id="exp" class="py-28 bg-gradient-to-b border-t from-stone-900 via-stone-800 to-stone-900 border-stone-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <h2 class="text-3xl md:text-4xl tracking-tight text-center mb-4 font-montserrat font-medium animate-fade">경력</h2>
+    <p class="text-center text-sm mb-16 text-stone-400 animate-fade">경력 총&nbsp;17년&nbsp;8개월</p>
+    <ol class="space-y-14 md:space-y-16 md:relative md:border-l-2 border-stone-700/70">
+      <li class="md:relative md:pl-20 flex flex-col animate-fade">
+        <span class="hidden md:flex absolute -left-7 top-0 items-center justify-center w-14 h-14 rounded-full text-[10px] shadow-inner backdrop-blur leading-tight text-center bg-orange-600/80 text-stone-100">
+          2018<br>~24
+        </span>
+        <article class="p-6 rounded-md backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+          <header class="mb-2">
+            <h3 class="text-lg font-medium font-manrope">큐익스프레스 개발실 차장</h3>
+            <p class="text-sm text-stone-400">2018.04 – 2024.08 · 6년 5개월</p>
+          </header>
+          <p class="leading-relaxed text-stone-300">WMS(창고 관리 시스템) 신규 개발 및 유지 보수</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-stone-400">
+            <li>개발 언어 : ASP.NET MVC &amp; ASP.NET Core &amp; RESTful API</li>
+            <li>운영 서버 : Windows Server</li>
+            <li class="">데이터 베이스 : MS-SQL</li>
+            <li class="">Receiving Service System(반입 서비스 시스템)</li>
+            <li class="">Dispatch Service System(반출 서비스 시스템)</li>
+            <li class="">Goods Storage Service System(제품 보관 서비스 시스템)</li>
+            <li class="">Surcharge Fee System(추가 요금 시스템)</li>
+            <li class="">Picking Service System(픽킹 서비스 시스템)</li>
+            <li>Packing Service System(팩킹 서비스 시스템)</li>
+            <li>Warehouse IN System(제품 입고 시스템)</li>
+            <li>Warehouse Out System(제품 출고 시스템)</li>
+            <li class="">WMS-Member Management System(창고 회원 관리 시스템)</li>
+            <li>Stock Management System(재고 관리 시스템)</li>
+            <li>주요 직무 : 웹개발자</li>
+          </ul>
+        </article>
+      </li>
+      <li class="md:relative md:pl-20 flex flex-col animate-fade">
+        <span class="hidden md:flex absolute -left-7 top-0 items-center justify-center w-14 h-14 rounded-full text-[10px] shadow-inner backdrop-blur leading-tight text-center bg-orange-600/80 text-stone-100">
+          2016<br>~17
+        </span>
+        <article class="p-6 rounded-md backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+          <header class="mb-2">
+            <h3 class="text-lg font-medium font-manrope">한국방송통신대학교 출판문화원 전산팀 (프리랜서)</h3>
+            <p class="text-sm text-stone-400">2016.08 – 2017.01 · 6개월</p>
+          </header>
+          <p class="leading-relaxed text-stone-300">Mobile 시스템 리뉴얼</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-stone-400">
+            <li class="">개발 언어 : Java JSP</li>
+            <li>주요 직무 : 프론트엔드 개발자</li>
+          </ul>
+        </article>
+      </li>
+      <li class="md:relative md:pl-20 flex flex-col animate-fade">
+        <span class="hidden md:flex absolute -left-7 top-0 items-center justify-center w-14 h-14 rounded-full text-[10px] shadow-inner backdrop-blur leading-tight text-center bg-orange-600/80 text-stone-100">
+          2013<br>~16
+        </span>
+        <article class="p-6 rounded-md backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+          <header class="mb-2">
+            <h3 class="text-lg font-medium font-manrope">토토로사 개발1팀</h3>
+            <p class="text-sm text-stone-400">2013.07 – 2016.07 · 3년 1개월</p>
+          </header>
+          <p class="leading-relaxed text-stone-300">시스템 유지 관리 및 기능 개선(SM)</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-stone-400">
+            <li>개발 언어 : ASP.NET, .NET MVC, jQuery, jQuery Mobile</li>
+            <li>보조 개발 언어 : asp, php</li>
+            <li>운영 서버 : Windows Server</li>
+            <li class="">데이터 베이스 : MS-SQL, MY-SQL</li>
+            <li>주요 직무 : 웹개발자</li>
+          </ul>
+        </article>
+      </li>
+      <li class="md:relative md:pl-20 flex flex-col animate-fade">
+        <span class="hidden md:flex absolute -left-7 top-0 items-center justify-center w-14 h-14 rounded-full text-[10px] shadow-inner backdrop-blur leading-tight text-center bg-orange-600/80 text-stone-100">
+          2006<br>~13
+        </span>
+        <article class="p-6 rounded-md backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+          <header class="mb-2">
+            <h3 class="text-lg font-medium font-manrope">텐디알 웹서비스 파트장</h3>
+            <p class="text-sm text-stone-400">2006.12 – 2013.06 · 6년 7개월</p>
+          </header>
+          <p class="leading-relaxed text-stone-300">웹 개발 및 시스템 유지 관리(SM)</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-stone-400">
+            <li>개발 언어 : ASP.NET MVC</li>
+            <li class="">보조 개발 언어 : asp</li>
+            <li>운영 서버 : Windows Server, Linux(CentOS)</li>
+            <li>데이터 베이스 : MS-SQL, MY-SQL</li>
+            <li>주요 직무 : 웹개발자</li>
+          </ul>
+        </article>
+      </li>
+      <li class="md:relative md:pl-20 flex flex-col animate-fade">
+        <span class="hidden md:flex absolute -left-7 top-0 items-center justify-center w-14 h-14 rounded-full text-[10px] shadow-inner backdrop-blur leading-tight text-center bg-orange-600/80 text-stone-100">
+          2005<br>~06
+        </span>
+        <article class="p-6 rounded-md backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+          <header class="mb-2">
+            <h3 class="text-lg font-medium font-manrope">사각 웹서비스 팀원</h3>
+            <p class="text-sm text-stone-400">2005.08 – 2006.08 · 1년 1개월</p>
+          </header>
+          <p class="leading-relaxed text-stone-300">웹 개발(SI)</p>
+          <ul class="list-disc pl-5 mt-3 space-y-1 text-sm text-stone-400">
+            <li class="">개발 언어 : ASP.NET, PHP, ASP</li>
+            <li class="">운영 서버 : Windows Server, Linux</li>
+            <li>데이터베이스 : MS-SQL2000, MY-SQL</li>
+            <li class="">주요 직무 : 웹 개발자</li>
+          </ul>
+        </article>
+      </li>
+    </ol>
+  </div>
+</section>
+<section id="skills" class="py-28 border-t border-stone-800">
+  <div class="max-w-6xl mx-auto px-6 space-y-20">
+    <h2 class="text-3xl md:text-4xl tracking-tight text-center font-montserrat font-medium animate-fade">기술 스킬</h2>
+    <div class="grid md:grid-cols-3 gap-10 animate-fade">
+      <div class="rounded-lg p-6 backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layout-dashboard" class="lucide lucide-layout-dashboard w-5 h-5 text-orange-400"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+          <h3 class="text-lg font-medium font-manrope">Front-end</h3>
+        </div>
+        <div class="relative h-64"><canvas id="frontendChart" aria-label="Front-end skills radar chart" width="293" height="256" style="display: block; box-sizing: border-box; height: 256px; width: 293px;" class=""></canvas></div>
+      </div>
+      <div class="rounded-lg p-6 backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="database" class="lucide lucide-database w-5 h-5 text-orange-400"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+          <h3 class="text-lg font-medium font-manrope">Back-end</h3>
+        </div>
+        <div class="relative h-64"><canvas id="backendChart" aria-label="Back-end skills radar chart" width="293" height="256" style="display: block; box-sizing: border-box; height: 256px; width: 293px;"></canvas></div>
+      </div>
+      <div class="rounded-lg p-6 backdrop-blur transition-colors bg-stone-800/60 hover:bg-stone-800/80">
+        <div class="flex items-center gap-3 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="settings-2" class="lucide lucide-settings-2 w-5 h-5 text-orange-400"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+          <h3 class="text-lg font-medium font-manrope">DevOps &amp; Tools</h3>
+        </div>
+        <div class="relative h-64"><canvas id="devopsChart" aria-label="DevOps skills radar chart" width="293" height="256" style="display: block; box-sizing: border-box; height: 256px; width: 293px;"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="projects" class="py-28 bg-gradient-to-b border-t from-stone-900 via-stone-800 to-stone-900 border-stone-800">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl tracking-tight mb-16 text-center font-montserrat font-medium animate-fade">포트폴리오 Projects</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <a href="https://next-pairing-book.vercel.app" target="_blank" class="rounded-lg overflow-hidden backdrop-blur bg-stone-800/60 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 ring-orange-400 transition-transform animate-fade" aria-label="Visit Pairing Book project">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczM2WAm9nd5epVHbH-I46Di88VQzEbn2eS2DSHknltlyg5Ff3usz-_XpLdcIX3qE0_qzgYHInQjRXhN43FxisdbmwoStiKsH5xA3O4pi24QDEh8ij9vNBlxQyQ6uI_BaFCz3QWSqVKpnIZWCyv36xyHF=w1872-h879-s-no-gm?w=800&amp;q=80" alt="Pairing Book screenshot" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h3 class="font-medium font-manrope">Pairing Book(바이브 코딩)</h3>
+          <p class="text-sm text-stone-400">Next.js · Prisma · Supabase</p>
+        </div>
+      </a>
+      <a href="https://schedule-note.vercel.app" target="_blank" class="rounded-lg overflow-hidden backdrop-blur bg-stone-800/60 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 ring-orange-400 transition-transform animate-fade" aria-label="Visit Schedule Note project">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczM0kkSZoDWiWHjOSznpuqVj75zWWC_Zlsp8h4bQRrDdUHnBpljmuFwKIJza5dHoUx9FghNl2HGQnRII32O4XJp4aPSYU_A-ajVonAyC5yZ8HoVNjLMWW9Hszneom5ZepvRbpkjjolaZ541AZgXPA6Is=w1884-h894-s-no-gm?w=800&amp;q=80" alt="Schedule Note screenshot" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h3 class="font-medium font-manrope">Schedule Note(바이브 코딩)</h3>
+          <p class="text-sm text-stone-400">Next.js · Prisma · Supabase</p>
+        </div>
+      </a>
+      <a href="https://jangjeonghun1004.github.io/React-Project1" target="_blank" class="rounded-lg overflow-hidden backdrop-blur bg-stone-800/60 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 ring-orange-400 transition-transform animate-fade" aria-label="Visit Interactive Resume project">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczP1wkIWXkiroKMds36YRVNN1_fYwlBaWpL15noJMcaY_9ntmVdDWp8UliewnadfV69CqCcM26F0dZD2NijcdTk7pLzmw22B-s2jQPALGYJR_KCFnvRovklh4eGOW1cn8dr8EzWNsn1Ap7UvNTcOaF9_=w1796-h883-s-no-gm?w=800&amp;q=80" alt="Interactive Resume screenshot" class="w-full h-44 object-cover">
+        <div class="p-4">
+          <h3 class="font-medium font-manrope">Blog</h3>
+          <p class="text-sm text-stone-400">Spring Boot RESTful API · React</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section id="contact" class="py-28 border-t border-stone-800">
+  <div class="max-w-4xl mx-auto px-6 text-center space-y-12">
+    <h2 class="text-3xl md:text-4xl tracking-tight font-montserrat font-medium animate-fade">Let’s Connect</h2>
+    <div class="grid md:grid-cols-2 gap-10 animate-fade">
+      <div class="flex flex-col items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-6 h-6 text-orange-400"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+        <a href="mailto:jangjeonghun1004@gmail.com" class="hover:text-orange-400">jangjeonghun1004@gmail.com</a>
+      </div>
+      <div class="flex flex-col items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="globe" class="lucide lucide-globe w-6 h-6 text-orange-400"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+        <a href="https://jangjeonghun.tistory.com/" target="_blank" class="hover:text-orange-400">Blog</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="border-t py-8 text-center text-sm border-stone-800 text-stone-400">
+  © 2025 Jeong-Hun. All rights reserved.
+</footer>
+<script>
+  const fadeObserver=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('animate-fade');
+        e.target.removeAttribute('data-fade');
+        fadeObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:.2});
+  document.querySelectorAll('[data-fade]').forEach(el=>fadeObserver.observe(el));
+
+  const chartCfg=(l,d)=>({type:'radar',data:{labels:l,datasets:[{data:d,fill:true,backgroundColor:'rgba(99,102,241,.3)',borderColor:'rgba(99,102,241,.8)',pointBackgroundColor:'#6366f1',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,scales:{r:{min:0,max:100,ticks:{display:false,stepSize:20},grid:{color:'#3f3f46'},angleLines:{color:'#3f3f46'},pointLabels:{color:'#d4d4d8',font:{size:12,weight:500}}},},plugins:{legend:{display:false}}}});
+
+  const charts=[
+    {id:'frontendChart',l:['HTML','Javascript','React','Next.js','CSS'],d:[100,100,60,60,70]},
+    {id:'backendChart',l:['ASP.NET','Spring Boot','RESTful API','Vibe Coding','SQL'],d:[100,60,90,85,95]},
+    {id:'devopsChart',l:['Docker','CI/CD','Git/TFS','AWS','Azure'],d:[50,50,70,50,50]}
+  ];
+  const chartObserver=new IntersectionObserver(es=>{
+    es.forEach(v=>{
+      if(v.isIntersecting){
+        const c=charts.find(x=>x.id===v.target.id);
+        new Chart(v.target,chartCfg(c.l,c.d));
+        chartObserver.unobserve(v.target);
+      }
+    });
+  },{threshold:.3});
+  charts.forEach(c=>chartObserver.observe(document.getElementById(c.id)));
+
+  lucide.createIcons();
+
+  const burger=document.getElementById('burger'),nav=document.getElementById('mobileNav'),closeBtn=document.getElementById('closeMenu');
+  burger.addEventListener('click',()=>nav.style.transform='translateX(0)');
+  closeBtn.addEventListener('click',()=>nav.style.transform='translateX(100%)');
+  nav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>nav.style.transform='translateX(100%)'));
+
+  document.querySelectorAll('.nav-link').forEach(a=>a.classList.add('hover:text-indigo-400','transition-colors'));
+</script>
+</body></html>
